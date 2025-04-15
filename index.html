@@ -1,46 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Masum Portfolio</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .header {
+      width: 100%;
+      background: #222;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #00ffc8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+    .navbar a.active,
+    .navbar a:hover {
+      color: #00ffc8;
+    }
+
+    .home {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .home-content {
+      flex: 1 1 50%;
+      max-width: 600px;
+    }
+
+    .home-content h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .home-content h1 {
+      font-size: 40px;
+      color: #00ffc8;
+    }
+
+    .home-content span {
+      color: #00ffc8;
+    }
+
+    .home-content p {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .social-media a {
+      margin-right: 10px;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    .social-media a:hover {
+      color: #00ffc8;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00ffc8;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    .home-img {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+
+    .home-img img {
+      width: 80%;
+      max-width: 300px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .home-img img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .home-content, .home-img {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .navbar {
+        margin-top: 15px;
+      }
+
+      .navbar a {
+        margin: 0 10px;
+      }
+
+      .home-content h1 {
+        font-size: 32px;
+      }
+
+      .home-content p {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      .navbar a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .home-content h1 {
+        font-size: 26px;
+      }
+
+      .home-content h3 {
+        font-size: 18px;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 8px 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <a href="" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="" class="active">Home</a>
-            <a href="About.html">About</a>
-            <a href="skill.html">Skill</a>
-            <a href="">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="About.html">About</a>
+      <a href="skill.html">Skill</a>
+      <a href="#">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-        <link rel="stylesheet" href="About.html">
-
-    </body>
-    </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's me</h3>
-            <h1>Abdur Rahman Masum</h1>
-            <h3>and i'm a  <span>Frontent & Backend Devloper </span></h3>
-            <p>I’m Abdur Rahman Masum, a passionate frontend & backend developer and graphic designer with expertise in creating engaging web experiences. My skills include Python, CSS, HTML, and Django, which I utilize to build dynamic and user-friendly websites. I am dedicated to merging aesthetics with functionality to deliver exceptional digital solutions.</p>
-            <div class="social-media">  
-                <a href="https://www.facebook.com/profile.php?id=100038855282721"><box-icon type='logo' name='facebook-circle'></box-icon></a>
-                <a href="https://www.youtube.com/@MasumgamingOfficial"><box-icon type='logo' name='youtube'></box-icon></a>
-                <a href="https://www.instagram.com/abdurmasum/"><box-icon type='logo' name='instagram-alt'></box-icon></a>
-                <a href=""><box-icon type='logo' name='linkedin'></box-icon></a>
-                <a href=""><box-icon type='logo' name='twitter'></box-icon></a>
-            </div>
-            <a href="cv.pdf" download class="btn">Download My CV</a>
-        </div>
-        <div class="home.img">
-            <img src="masum.jpg" alt="gdygdy">
-        </div>
-    </section>
+  <section class="home">
+    <div class="home-content">
+      <h3>Hello, It's me</h3>
+      <h1>Abdur Rahman Masum</h1>
+      <h3>and I'm a <span>Frontend & Backend Developer</span></h3>
+      <p>I’m Abdur Rahman Masum, a passionate frontend & backend developer and graphic designer with expertise in creating engaging web experiences. My skills include Python, CSS, HTML, and Django, which I utilize to build dynamic and user-friendly websites. I am dedicated to merging aesthetics with functionality to deliver exceptional digital solutions.</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100038855282721"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://www.youtube.com/@MasumgamingOfficial"><i class='bx bxl-youtube'></i></a>
+        <a href="https://www.instagram.com/abdurmasum/"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+      </div>
+      <a href="cv.pdf" download class="btn">Download My CV</a>
+    </div>
+    <div class="home-img">
+      <img src="masum.jpg" alt="Profile Picture" />
+    </div>
+  </section>
 </body>
 </html>
