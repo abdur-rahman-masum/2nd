@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Stylish Text</title>
+    <title>About Me - Responsive Design</title>
 </head>
 <body style="margin: 0; background: linear-gradient(135deg, #ff5e5e, #ffb347, #1b2a49); background-size: 400% 400%; animation: gradientShift 15s ease infinite; font-family: 'Segoe UI', sans-serif;">
 
-    <div style="background-color: rgba(255, 255, 255, 0.94); padding: 50px; border-radius: 25px; max-width: 850px; margin: 70px auto; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); border: 2px solid #fff;">
+    <div style="background-color: rgba(255, 255, 255, 0.94); padding: 50px 30px; border-radius: 25px; max-width: 850px; margin: 70px auto; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); border: 2px solid #fff;">
         <h2 style="font-size: 40px; text-align: center; font-family: 'Georgia', serif; margin-bottom: 30px; font-weight: 900; letter-spacing: 1px; animation: slideInFromTop 1.2s ease;">
             <span style="background: linear-gradient(90deg, #d4145a, #fbb03b, #1b2a49); -webkit-background-clip: text; color: transparent; display: inline-block; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
                 About Me
             </span>
         </h2>
 
-        <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-            <img src="masum.jpg" alt="Profile Picture" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 6px solid #1b2a49; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3); animation: slideInFromLeft 1.4s ease;">
-            <div style="flex: 1; background: #fef9f4; padding: 25px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); animation: slideInFromRight 1.5s ease;">
+        <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap; justify-content: center;">
+            <img src="masum.jpg" alt="Profile Picture" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 6px solid #1b2a49; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3); animation: slideInFromLeft 1.4s ease; flex-shrink: 0;">
+            <div style="flex: 1; min-width: 260px; background: #fef9f4; padding: 25px; border-radius: 15px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); animation: slideInFromRight 1.5s ease;">
                 <p style="font-size: 18.5px; line-height: 1.9; color: #333; text-align: justify; margin: 0;">
                     Hello! I'm <strong style="color: #d4145a; font-weight: 700;">Abdur Rahman Masum</strong>, a passionate 
                     <span style="color: #1b2a49; font-weight: 600;">Frontend Developer</span> and 
@@ -58,6 +58,31 @@
         @keyframes slideInFromBottom {
             from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 30px !important;
+            }
+            p {
+                font-size: 16px !important;
+            }
+            img {
+                width: 140px !important;
+                height: 140px !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            p {
+                font-size: 15px !important;
+            }
+            .quote {
+                font-size: 17px !important;
+            }
         }
     </style>
 
