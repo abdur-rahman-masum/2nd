@@ -79,7 +79,6 @@
 
     const finalMessage = `Hello Masum, I'm ${name} (${email}${phone ? `, 📞 ${phone}` : ''}).\n\nHere's my message:\n${message}`;
     const whatsappURL = `https://wa.me/8801877483731?text=${encodeURIComponent(finalMessage)}`;
-    window.open(whatsappURL, "_blank") || (window.location.href = whatsappURL);
   }
 </script>
 
