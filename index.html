@@ -178,6 +178,25 @@
         padding: 8px 18px;
       }
     }
+    @keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.home-img img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  animation: slideInRight 1s ease forwards;
+}
+
   </style>
 </head>
 <body>
