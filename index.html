@@ -43,11 +43,14 @@
       text-decoration: none;
       margin-left: 20px;
       font-size: 18px;
+      transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .navbar a.active,
     .navbar a:hover {
       color: #00ffc8;
+      transform: scale(1.1); /* Zoom effect */
+      box-shadow: 0 0 10px rgba(0, 255, 200, 0.6); /* Shadow effect */
     }
 
     .home {
@@ -63,23 +66,34 @@
       max-width: 600px;
     }
 
-    .home-content h3 {
+    .home-content h3:first-of-type {
       font-size: 22px;
       margin-bottom: 10px;
+      animation: slideInLeft 1s ease forwards;
+      opacity: 0;
     }
 
     .home-content h1 {
       font-size: 40px;
       color: #00ffc8;
+      animation: slideInTop 1s ease forwards;
+      animation-delay: 0.3s;
+      opacity: 0;
     }
 
-    .home-content span {
+    .home-content h3 span {
       color: #00ffc8;
+      animation: slideInRight 1s ease forwards;
+      animation-delay: 0.6s;
+      opacity: 0;
     }
 
     .home-content p {
       margin: 20px 0;
       font-size: 16px;
+      animation: slideInBottom 1s ease forwards;
+      animation-delay: 0.9s;
+      opacity: 0;
     }
 
     .social-media a {
@@ -113,10 +127,56 @@
       max-width: 300px;
       border-radius: 12px;
       transition: transform 0.3s ease;
+      animation: slideInRight 2s ease forwards;
     }
 
     .home-img img:hover {
       transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes slideInLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInTop {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInBottom {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     /* Responsive Styles */
@@ -142,10 +202,6 @@
 
       .home-content h1 {
         font-size: 32px;
-      }
-
-      .home-content p {
-        font-size: 15px;
       }
     }
 
@@ -178,32 +234,13 @@
         padding: 8px 18px;
       }
     }
-    @keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.home-img img {
-  width: 80%;
-  max-width: 300px;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  animation: slideInRight 1s ease forwards;
-}
-
   </style>
 </head>
 <body>
   <header class="header">
     <a href="#" class="logo">Portfolio</a>
     <nav class="navbar">
-      <a href="#" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="skill.html">Skill</a>
       <a href="#">Portfolio</a>
